@@ -11,6 +11,7 @@
 
 html {
     box-sizing: border-box;
+    /* scroll-behavior: smooth; */
 }
 
 /* *, 
@@ -360,6 +361,39 @@ li.nav-item.no-margin {
     0px 0px 1px
     rgba(0, 0, 0, 0.12);
 }
+
+
+.element-thumb {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+
+    overflow: hidden;
+}
+
+.element-thumb > .label-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--accent-color);
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 63px 24px;
+
+    font-family: Roboto;
+    font-size: 18px;
+    letter-spacing: 0.03em;
+    line-height: calc(28/18);
+    color: var(--main-background-color);
+
+    transform: translatey(100%);
+    transition: transform var(--anim-fast);
+}
+
+.element-thumb:hover .label-overlay {
+    transform: translatex(0);
+  }
 
 
 .clients {
