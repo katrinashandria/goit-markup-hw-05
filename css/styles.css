@@ -201,6 +201,7 @@ li.nav-item.no-margin {
     height: 4px;
     border-radius: 2px;
     margin: 0;
+    transform: translateY(1px);
 }
 
 .header-phone {
@@ -405,7 +406,8 @@ li.nav-item.no-margin {
     color: var(--main-background-color);
 
     transform: translatey(100%);
-    transition: var(--anim-fast);
+    transition: transform var(--anim-fast);
+
 }
 
 .element-thumb:hover .label-overlay {
