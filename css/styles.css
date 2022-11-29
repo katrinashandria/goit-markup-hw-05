@@ -817,21 +817,35 @@ fill: currentColor;
 
 /* ----------Modal window--------- */
 
+
+
 .backdrop {
     position: fixed;
     top: 0;
     left: 0;
     z-index: 100;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     width: 100%;
     height: 100%;
     background-color:rgba(0, 0, 0, 0.2);
+
+    transition: opacity 180ms linear, visibility 180ms linear;
+}
+
+.backdrop.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
 }
 
 .modal {
-    position: absolute;
+    /* position: absolute;
     top: 50%;
-    left: 50%;
+    left: 50%; */
 
     width: 528px;
     min-height: 581px;
@@ -844,8 +858,24 @@ fill: currentColor;
     0px 3px 0px 1px
     rgba(0, 0, 0, 0.12);
 
-    transform: translateX(-50%) translateY(-50%);
+    /* transform-origin: center;
+    transform: translateX(-50%) translateY(-50%); */
+
+    /* transition: transform var(--anim-fast), opacity var(--anim-fast); */
+
+    animation-timing-function: cubic-bezier(0.390, 0.575, 0.565, 1.000);
+    animation-duration: 0.4s;
+    animation-fill-mode: both;
 }
+
+.modal.modal-animation {
+    animation-name: scale-up-center;
+    }
+
+/* .backdrop.is-hidden .modal {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-70%);
+} */
 
 .modal-button {
     position: absolute;
@@ -866,3 +896,15 @@ fill: currentColor;
 
     cursor: pointer;
 }
+
+
+/* ----------Animation----------- */
+
+@keyframes scale-up-center {
+    0% {
+      transform: scale(0.5);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
