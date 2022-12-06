@@ -415,6 +415,30 @@ li.nav-item.no-margin {
     transform: translatex(0);
   }
 
+.product-thumb {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.product-thumb > .product-overlay {
+    position: absolute;
+    width: 370px;
+    height: 70px;
+    background-color: rgba(47, 48, 58, 0.8);
+    top: calc(100% - 70px);
+    right: 0;
+    margin: 0;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    text-align: center;
+
+    font-family: Roboto;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    line-height: calc(16/14);
+    color: var(--main-background-color);
+}
 
 .clients {
     display: flex;
