@@ -415,7 +415,7 @@ li.nav-item.no-margin {
     transform: translatex(0);
   }
 
-/* .product-thumb {
+.product-thumb {
     position: relative;
     margin-left: auto;
     margin-right: auto;
@@ -438,7 +438,7 @@ li.nav-item.no-margin {
     letter-spacing: 0.03em;
     line-height: calc(16/14);
     color: var(--main-background-color);
-} */
+}
 
 .clients {
     display: flex;
@@ -649,6 +649,7 @@ background-image: url(../images/); }*/
     line-height: calc(36/18);
     letter-spacing: 0.06em;
     margin-bottom: 4px;
+    color: var(--primary-text-color);
 }
 
 .project-type-title {
