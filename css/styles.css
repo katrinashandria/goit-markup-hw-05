@@ -411,11 +411,11 @@ li.nav-item.no-margin {
 
 }
 
-.element-thumb:hover .label-overlay {
+.element-item:hover .label-overlay {
     transform: translatex(0);
   }
 
-.product-thumb {
+/* .product-thumb {
     position: relative;
     margin-left: auto;
     margin-right: auto;
@@ -438,7 +438,7 @@ li.nav-item.no-margin {
     letter-spacing: 0.03em;
     line-height: calc(16/14);
     color: var(--main-background-color);
-}
+} */
 
 .clients {
     display: flex;
